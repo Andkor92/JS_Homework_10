@@ -1,0 +1,54 @@
+body {
+    background-color: aqua;
+}
+
+.product-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 60px;
+}
+
+.product {
+    width: 200px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 16px;
+}
+
+.product-content {
+    border: 1px solid rgb(54, 228, 10);
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.product-nutrions {
+    width: 100%;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    gap: 16px;
+    margin: 10px;
+}
+
+.product-genus,
+.product-name,
+.product-id,
+.product-family,
+.product-order {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    display: inline-block;
+    padding: 3px;
+    margin: 4px;
+    font-size: 20px;
+}

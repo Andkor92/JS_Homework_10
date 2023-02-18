@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="product-box"></div>
+    <script src="data.js"></script>
+    <script>
+        const productBox = document.querySelector('.product-box');
+        const dataProductlDb = JSON.parse(data);
+        console.log(dataProductlDb);
+
+        dataProductlDb.forEach(element => {
+            const productEl = document.createElement('div');
+            productEl.classList.add('product');
+
+            const productContent = document.createElement('div');
+            productContent.classList.add('product-content');
+
+            const productGenus = document.createElement('p');
+            productGenus.classList.add('product-genus');
+            productGenus.textContent = `Род: ${element.genus}`;
+
+            const productName = document.createElement('h2');
+            productName.classList.add('product-name');
+            productName.textContent = `Название: ${element.name}`;
+
+            const productId = document.createElement('p');
+            productId.classList.add('product-id');
+            productId.textContent = `Порядковый номер в каталоге: ${element.id}`;
+
+            const productFamily = document.createElement('p');
+            productFamily.classList.add('product-family');
+            productFamily.textContent = `Семейство: ${element.family}`;
+
+            const productOrder = document.createElement('p');
+            productOrder.classList.add('product-order');
+            productOrder.textContent = `Род: ${element.order}`;
+
+            const productNutrionsContent = document.createElement('div');
+            productNutrionsContent.classList.add('product-nutrions');
+
+            const nutrionsCarbohydrates = document.createElement('p');
+            nutrionsCarbohydrates.classList.add('nutrions-carbohydrates');
+            nutrionsCarbohydrates.textContent = `Углеводы: ${element.nutritions.carbohydrates}`;
+
+            const nutrionsProtein = document.createElement('p');
+            nutrionsProtein.classList.add('nutrions-protein');
+            nutrionsProtein.textContent = `Белки: ${element.nutritions.protein}`;
+
+            const nutrionsFat = document.createElement('p');
+            nutrionsFat.classList.add('nutrions-fat');
+            nutrionsFat.textContent = `Жиры: ${element.nutritions.fat}`;
+
+            const nutrionsCalories = document.createElement('p');
+            nutrionsCalories.classList.add('nutrions-calories');
+            nutrionsCalories.textContent = `Калории: ${element.nutritions.calories}`;
+
+            const nutrionsSugar = document.createElement('p');
+            nutrionsSugar.classList.add('nutrions-sugar');
+            nutrionsSugar.textContent = `Сахар: ${element.nutritions.sugar}`;
+
+            productBox.appendChild(productEl);
+            productEl.appendChild(productContent);
+            productContent.appendChild(productGenus);
+            productContent.appendChild(productName);
+            productContent.appendChild(productId);
+            productContent.appendChild(productFamily);
+            productContent.appendChild(productOrder);
+            productContent.appendChild(productNutrionsContent);
+            productNutrionsContent.appendChild(nutrionsCarbohydrates);
+            productNutrionsContent.appendChild(nutrionsProtein);
+            productNutrionsContent.appendChild(nutrionsFat);
+            productNutrionsContent.appendChild(nutrionsCalories);
+            productNutrionsContent.appendChild(nutrionsSugar);
+        });
+    </script>
+</body>
+
+</html>
